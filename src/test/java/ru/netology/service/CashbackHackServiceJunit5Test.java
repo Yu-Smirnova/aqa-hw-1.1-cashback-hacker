@@ -1,9 +1,13 @@
 package ru.netology.service;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
-public class CashbackHackServiceTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
+public class CashbackHackServiceJunit5Test {
+
+    @Test
     public void testRemainUnder1000() {
         CashbackHackService service = new CashbackHackService();
         int expected = 418;
@@ -12,6 +16,7 @@ public class CashbackHackServiceTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testRemainOver1000() {
         CashbackHackService service = new CashbackHackService();
         int expected = 707;
@@ -20,6 +25,7 @@ public class CashbackHackServiceTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testRemainWhen0() {
         CashbackHackService service = new CashbackHackService();
         int expected = 1000;
@@ -28,6 +34,7 @@ public class CashbackHackServiceTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testRemainWhen999() {
         CashbackHackService service = new CashbackHackService();
         int expected = 1;
@@ -36,6 +43,7 @@ public class CashbackHackServiceTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testRemainWhen1000() {
         CashbackHackService service = new CashbackHackService();
         int expected = 0;
@@ -44,6 +52,7 @@ public class CashbackHackServiceTest extends TestCase {
         assertEquals(expected, actual);
     }
 
+    @Test
     public void testRemainWhen1001() {
         CashbackHackService service = new CashbackHackService();
         int expected = 999;
